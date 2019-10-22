@@ -4,7 +4,7 @@ import AppContext from "../contexts/AppContext";
 
 const Events = () => {
   // const value = useContext(AppContext);
-  const { state} = useContext(AppContext);
+  const { state } = useContext(AppContext);
   return (
     <>
       {/* <AppContext.Consumer>
@@ -25,7 +25,7 @@ const Events = () => {
         </thead>
         <tbody>
           {state.events.map((event, index) => (
-            <Event key={index} event={event}/>
+            <Event key={index} event={event} />
           ))}
         </tbody>
       </table>
