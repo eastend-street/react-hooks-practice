@@ -8,12 +8,16 @@ import reducer from "../reducers";
 // console.log({ AppContext });
 
 const App = () => {
-  const [state, dispatch] = useReducer(reducer, []); // 第２引数は初期状態
+  const initialState = {
+    events: []
+  };
+  const [state, dispatch] = useReducer(reducer, initialState); // 第２引数は初期状態
+  // const [state, dispatch] = useReducer(reducer, []); // 第２引数は初期状態
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       <div className="container-fluid">
-        <EventForm/>
-        <Events/>
+        <EventForm />
+        <Events />
       </div>
     </AppContext.Provider>
   );
